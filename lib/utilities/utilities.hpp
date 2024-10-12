@@ -14,14 +14,14 @@ namespace util
 
 #pragma region RAM {
 
-void     ramUsage(Stream *debugPort);
-uint16_t stackUsage(TaskHandle_t taskHandle, uint32_t totalStackSize);
+void ramUsage(Stream *debugPort);
 
 #pragma endregion }
 
 #pragma region Task {
 
-void taskStatus(Stream *serialPort, TaskHandle_t taskHandle);
+void     taskStatus(Stream *serialPort, TaskHandle_t taskHandle);
+uint16_t taskStackUsage(TaskHandle_t taskHandle, uint32_t totalStackSize);
 
 #pragma endregion }
 

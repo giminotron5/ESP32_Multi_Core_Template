@@ -67,31 +67,6 @@ void ramUsage(Stream *serialPort)
   serialPort->println("%");
 }
 
-/**
- * @brief Returns the used stack space of a given task.
- *
- * This function calculates and returns the amount of stack space used by a task, as well as the remaining stack space.
- * It is useful for ensuring that a task is not running out of stack, helping to optimize memory usage and avoid stack overflows.
- *
- * Example:
- * 
- * ```
- * uint16_t usedStack = stackUsage(taskHandle, taskStackSize);  // Get used stack space for the specified task.
- * ```
- * 
- * @param taskHandle    The handle of the task whose stack usage is to be checked.
- * @param taskStackSize The total stack size assigned to the task.
- * 
- * @return The amount of stack space used by the task (in bytes).
- */
-uint16_t stackUsage(TaskHandle_t taskHandle, uint32_t taskStackSize)
-{
-  // uxTaskGetStackHighWaterMark returns the minimum amount of stack space that has been left for the task
-  UBaseType_t stackHighWaterMark = uxTaskGetStackHighWaterMark(taskHandle);
-  // Return the used amount of stack space for the task
-  return taskStackSize - stackHighWaterMark;
-}
-
 #pragma endregion }
 
 #pragma region Task {
@@ -154,6 +129,31 @@ void taskStatus(Stream *serialPort, TaskHandle_t taskHandle)
       serialPort->println("Unknown");
       break;
   }
+}
+
+/**
+ * @brief Returns the used stack space of a given task.
+ *
+ * This function calculates and returns the amount of stack space used by a task, as well as the remaining stack space.
+ * It is useful for ensuring that a task is not running out of stack, helping to optimize memory usage and avoid stack overflows.
+ *
+ * Example:
+ * 
+ * ```
+ * uint16_t usedStack = taskStackUsage(taskHandle, taskStackSize);  // Get used stack space for the specified task.
+ * ```
+ * 
+ * @param taskHandle    The handle of the task whose stack usage is to be checked.
+ * @param taskStackSize The total stack size assigned to the task.
+ * 
+ * @return The amount of stack space used by the task (in bytes).
+ */
+uint16_t taskStackUsage(TaskHandle_t taskHandle, uint32_t taskStackSize)
+{
+  // uxTaskGetStackHighWaterMark returns the minimum amount of stack space that has been left for the task
+  UBaseType_t stackHighWaterMark = uxTaskGetStackHighWaterMark(taskHandle);
+  // Return the used amount of stack space for the task
+  return taskStackSize - stackHighWaterMark;
 }
 
 #pragma endregion }
