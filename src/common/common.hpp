@@ -6,7 +6,6 @@
 #include "definitions.hpp"
 #include "objects.hpp"
 #include "variables.hpp"
-#include "utility/utility.hpp"
 
 namespace common
 {

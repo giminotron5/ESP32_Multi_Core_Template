@@ -1,7 +1,6 @@
-#include <common/common.hpp>
-#include "esp_heap_caps.h"
+#include "utility.hpp"
 
-namespace common::util
+namespace util
 {
 
 #pragma region CPU {
@@ -159,4 +158,4 @@ void taskStatus(Stream *serialPort, TaskHandle_t taskHandle)
 
 #pragma endregion }
 
-} // namespace common::util
+} // namespace util
