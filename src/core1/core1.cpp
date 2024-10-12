@@ -2,6 +2,7 @@
  *  File: core1.cpp
  *  Project: ESP32 Multi-Core Template
  *  Version: 1.0.0
+ *  License: MIT License
  *  Author: giminotron5
  *  GitHub: https://github.com/giminotron5/ESP32_Multi-Core_Template
  * 
