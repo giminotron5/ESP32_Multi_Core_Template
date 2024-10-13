@@ -46,7 +46,6 @@ Each section has a `setup` and `loop` function where you can implement your task
 The watchdog timer is handled automatically this `loop` functions to prevent the system from freezing.
 
 
-
 ## Getting Started
 ### Requirements
 - **PlatformIO**: This project is designed to work with PlatformIO. Make sure you have it installed in your environment.  
@@ -57,25 +56,30 @@ The watchdog timer is handled automatically this `loop` functions to prevent the
    ```bash
    git clone https://github.com/giminotron5/ESP32_Multi-Core_Template.git
    ```
-2. Open the project in PlatformIO:
+   
+2. Navigate to the project directory:
+   ```bash
+   cd ESP32_Multi-Core_Template
+   ```
+
+3. Remove the `.git` folder to clean up the project for your own use:
+   ```bash
+   rm -rf .git
+   ```
+   
+4. Open the project in PlatformIO:
    - Open the cloned folder in Visual Studio Code with PlatformIO extension:
      ```bash
-     code ESP32_Multi-Core_Template
+     code .
      ```
    - Alternatively, you can go to **Open Project** in PlatformIO and select the project folder.
 
-3. Build and upload to your ESP32 board:
-   - Change current directory to project directory:
-     ```bash
-     cd ESP32_Multi-Core_Template
-     ```
-   - Build and upload the project:
+5. Build and upload to your ESP32 board:
      ```bash
      pio run --target upload
      ```
 
-4. Feel free to customize this template to fit your project’s needs. ***Enjoy structured coding!***
-
+6. Feel free to customize this template to fit your project’s needs. ***Enjoy structured coding!***
 
 
 ## Debugging
@@ -96,7 +100,6 @@ The debug serial port for each core can be set separately. To change the default
 - For core1: `C1_DEBUG_PORT`
 
 The default baud rate for debug serial communication is `115200`.
-
 
 
 ## Utilities Module
