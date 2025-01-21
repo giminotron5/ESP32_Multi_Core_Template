@@ -54,12 +54,12 @@ The watchdog timer is handled automatically this `loop` functions to prevent the
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/giminotron5/ESP32_Multi-Core_Template.git
+   git clone https://github.com/giminotron5/ESP32_Multi_Core_Template.git
    ```
    
 2. Navigate to the project directory:
    ```bash
-   cd ESP32_Multi-Core_Template
+   cd ESP32_Multi_Core_Template
    ```
 
 3. Remove the `.git` folder to clean up the project for your own use:
@@ -111,7 +111,7 @@ This module helps developers keep track of RAM usage, task status, and more, ens
 - **Stack Usage**: Functions to calculate and report stack usage for tasks.
 - **Task Status**: Functionality to check and report the status of tasks running on the ESP32.
 
-For the source code, please refer to the [Utilities Source](https://github.com/giminotron5/ESP32_Multi-Core_Template/tree/main/lib/utilities).
+For the source code, please refer to the [Utilities Source](https://github.com/giminotron5/ESP32_Multi_Core_Template/tree/main/lib/utilities).
 
 
 ## FreeRTOS Integration
